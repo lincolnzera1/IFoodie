@@ -22,18 +22,18 @@ const Home = () => {
         },
         {
             dia: 'Sexta-feira',
-            prato: 'Pizza de Calabresa com Suco de Uva'
+            prato: 'Pizza de Calabresa com Suco de Uva '
         }
     ];
 
   return (
     <Box
       backgroundColor={"white"}
-      height={"100vh"}
+      height={"100%"}
       width={"100vw"}
       display={"flex"}
     >
-      <Box backgroundColor={"#6F9B4E"} width={"40%"} display={"flex"} flexDirection={"column"} justifyContent={"space-around"}>
+      <Box height={"100vh"} backgroundColor={"#6F9B4E"} width={"40%"} display={"flex"} flexDirection={"column"} justifyContent={"space-around"}>
         {merendas.map((dia) => (
           <FoodCard dia={dia.dia} descricao={dia.prato} />
         ))}
