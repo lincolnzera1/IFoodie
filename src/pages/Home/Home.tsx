@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import { Card } from "primereact/card";
 import FoodCard from "../../components/FoodCard";
 
 const Home = () => {

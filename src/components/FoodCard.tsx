@@ -1,7 +1,5 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
-
-import Pizza from "../assets/pizza.png";
 import Hamburguer from "../assets/hamburguer.png";
 
 interface CardProps {
