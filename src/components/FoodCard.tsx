@@ -25,7 +25,7 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
       <Box
         backgroundColor={"white"}
         position={"absolute"}
-        left={10}
+        left={6}
         borderRadius={"40%"}
         padding={2}
         border={"1px solid gray"}

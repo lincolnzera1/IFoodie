@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 const ArrowButton = () => {
