@@ -1,6 +1,7 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import Hamburguer from "../assets/hamburguer.png";
+import ArrowButton from "./arrowButton";
 
 interface CardProps {
   dia: string;
@@ -11,9 +12,11 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
   return (
     <Box
       display={"flex"}
-      width={300}
+      width={250}
+      minHeight={100}
       background={"white"}
-      marginLeft={100}
+      marginLeft={90}
+      // marginRight={5}
       // border={"1px solid black"}
       borderRadius={15}
       alignItems={"center"}
@@ -22,14 +25,14 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
       <Box
         backgroundColor={"white"}
         position={"absolute"}
-        left={15}
+        left={10}
         borderRadius={"40%"}
-        padding={5}
-        border={"1px solid black"}
+        padding={2}
+        border={"1px solid gray"}
       >
         <Image
           objectFit="contain"
-          width={87}
+          width={62}
           src={Hamburguer}
           alt="Caffe Latte"
         />
@@ -40,7 +43,7 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
         alignItems={"center"}
         justifyContent={"center"}
         // background={'red'}
-        marginLeft={10}
+        marginLeft={3}
         padding={2}
       >
         <Text
@@ -54,13 +57,14 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
         {/* <Divider height={0.5} backgroundColor={'gray'} /> */}
         <Text
           fontFamily={"Roboto"}
-          fontSize={20}
+          fontSize={16}
           textAlign={"center"}
-          marginTop={5}
+          // marginTop={5}
         >
           {descricao}
         </Text>
       </Box>
+      <ArrowButton />
     </Box>
   );
 };
