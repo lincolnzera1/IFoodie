@@ -1,16 +1,20 @@
 import { Box, Image } from "@chakra-ui/react";
 import FoodCard from "../../components/FoodCard";
-import Logo from '../../assets/logo.png';
+import Logo from "../../assets/logo.png";
 
 const Home = () => {
   const merendas = [
     {
       dia: "Segunda-feira",
       prato: "Macarrão com Suco de Laranja",
+      deltalhe:
+        "Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. ",
     },
     {
       dia: "Terça-feira",
       prato: "Sanduíche de Frango com Suco de Maçã",
+      deltalhe:
+        "Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. Macarrão faz bem pra saúde. ",
     },
     {
       dia: "Quarta-feira",
@@ -27,30 +31,34 @@ const Home = () => {
   ];
 
   return (
-    <Box
-      backgroundColor={"white"}
-      height={"100%"}
-      width={"100vw"}
-    >
+    <Box backgroundColor={"white"} height={"100vh"} width={"100vw"} display="flex" flexDirection="column">
       <Box
-        height={"100vh"}
         backgroundColor={"#6F9B4E"}
         width={"40%"}
         display={"flex"}
         flexDirection={"column"}
         paddingTop={123}
+        flex="1"
       >
         <Image
-          position={'absolute'}
+          position={"absolute"}
           top={0}
           marginTop={10}
           marginLeft={5}
           src={Logo}
           width={200}
         />
-        {merendas.map((dia) => (
-          <FoodCard dia={dia.dia} descricao={dia.prato} />
-        ))}
+        <Box flex="1">
+          {merendas.map((dia, index) => (
+            <FoodCard
+              key={index}
+              dia={dia.dia}
+              descricao={dia.prato}
+              detalhe={dia.deltalhe}
+              espacamento={index === merendas.length - 1 ? 5 : undefined}
+            />
+          ))}
+        </Box>
       </Box>
     </Box>
   );

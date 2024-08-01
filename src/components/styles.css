@@ -1,0 +1,21 @@
+/* Supondo que você tenha uma classe específica para o botão */
+.custom-accordion-button {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  /* Se você precisa garantir que os estilos não sejam sobrescritos */
+  .chakra-accordion__button.css-uttm9k {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .chakra-accordion__item.css-17mg6aq {
+    border: none;
+  }
