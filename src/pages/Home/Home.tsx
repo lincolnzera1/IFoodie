@@ -1,5 +1,6 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import FoodCard from "../../components/FoodCard";
+import Logo from '../../assets/logo.png';
 
 const Home = () => {
   const merendas = [
@@ -37,9 +38,16 @@ const Home = () => {
         width={"40%"}
         display={"flex"}
         flexDirection={"column"}
-        justifyContent={"space-evenly"}
-        paddingTop={73}
+        paddingTop={123}
       >
+        <Image
+          position={'absolute'}
+          top={0}
+          marginTop={10}
+          marginLeft={5}
+          src={Logo}
+          width={200}
+        />
         {merendas.map((dia) => (
           <FoodCard dia={dia.dia} descricao={dia.prato} />
         ))}

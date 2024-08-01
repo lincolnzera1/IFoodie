@@ -8,7 +8,7 @@ const ArrowButton = () => {
 			display={'flex'}
 			alignItems={'center'}
 			justifyContent={'center'}
-			right={6}
+			right={-67}
       width={70}
       height={70}
       borderRadius={"50%"}

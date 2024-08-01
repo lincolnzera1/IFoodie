@@ -16,6 +16,7 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
       minHeight={100}
       background={"white"}
       marginLeft={90}
+      marginTop={5}
       // marginRight={5}
       // border={"1px solid black"}
       borderRadius={15}
@@ -39,6 +40,7 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
       </Box>
       <Box
         display={"flex"}
+        position={'relative'}
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -63,8 +65,8 @@ const FoodCard: React.FC<CardProps> = ({ dia, descricao }) => {
         >
           {descricao}
         </Text>
+        <ArrowButton />
       </Box>
-      <ArrowButton />
     </Box>
   );
 };
