@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { IoIosArrowDown, IoIosArrowForward, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 interface ArrowButtonProps {
   handleClick: () => void;
